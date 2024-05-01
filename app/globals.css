@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'InstrumentSans';
+  src: url('/assets/fonts/instrumentSans/InstrumentSans-VariableFont_wdth,wght.ttf') format('truetype');
+}
+
+.button1 {
+  @apply h-[44px] w-[50px] items-center justify-center gap-[2px] rounded-[6px] border border-[#636262] bg-gradient-to-b text-[16px] font-extrabold tracking-[1px] transition disabled:opacity-25 dark:border-[1px] dark:fill-white dark:text-white md:w-[110px];
+}
+
+.button1:not([disabled]):hover {
+  @apply border border-[darkorange] fill-[darkorange] text-[darkorange] transition dark:border dark:border-[orange] dark:fill-[orange] dark:text-[orange];
+}
+
+.button1:disabled:hover {
+  @apply cursor-pointer;
+}
+
+.button2 {
+  @apply flex h-[44px] min-w-[50px] items-center justify-center overflow-hidden rounded-[6px] border-[darkorange] bg-gradient-to-b from-[darkorange] to-[#d57703] text-[16px] font-extrabold tracking-[1px] transition hover:border dark:border-[orange] dark:from-[orange] dark:to-[#b97b08] dark:hover:border md:min-w-[110px];
+}
+
+.button2Inner {
+  @apply flex size-full items-center justify-center bg-[#1C1C1C]/0 fill-white text-white transition group-hover:bg-[white]/100 group-hover:fill-[darkorange] group-hover:text-[darkorange] dark:group-hover:bg-[#232323]/100 dark:group-hover:fill-[orange] dark:group-hover:text-[orange];
+}
+
+h1 {
+  @apply text-4xl font-medium transition dark:text-white;
+}
+
+h2 {
+  @apply text-3xl font-medium transition dark:text-white;
+}
+
+h3 {
+  @apply text-2xl font-medium transition dark:text-white;
+}
+
+p {
+  @apply text-[14px] transition dark:text-white md:text-[16px];
+}
+
+label {
+  @apply text-[14px] font-medium transition dark:text-white md:text-[16px];
+}
+
+.regularInput {
+  @apply h-[45px] rounded-[6px] border border-[rgba(0,0,0,0.2)] p-4 outline-none dark:border-[#1C1C1C] dark:bg-[#1C1C1C] dark:text-white;
+}
+
+.themeHover .regularInput {
+  @apply transition;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  @apply shadow-[0_0_0_30px_white_inset] dark:shadow-[0_0_0_30px_#1c1c1c_inset];
+  -webkit-text-fill-color: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-text-size-adjust: none;
+}
+:is(.dark) input:-webkit-autofill {
+  -webkit-text-fill-color: white;
+}
