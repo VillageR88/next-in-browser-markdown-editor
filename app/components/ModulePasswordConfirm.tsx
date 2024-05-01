@@ -20,6 +20,7 @@ export default function ModulePasswordConfirm() {
         name="passwordConfirm"
         required
         minLength={8}
+        autoComplete="new-password"
         placeholder="Confirm your password"
         id="passwordConfirm"
         type="password"

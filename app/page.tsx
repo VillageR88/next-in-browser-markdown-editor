@@ -24,16 +24,13 @@ export default function Home() {
           setToken(e);
           handleLoadCollectionGroup({ token: e })
             .then((data) => {
-              if (!data) {
-                setLoading(false);
-              }
               setDataContext(JSON.parse(JSON.stringify(data)) as CollectionGroup);
               initialDataContext.current = JSON.parse(JSON.stringify(data)) as CollectionGroup;
               setLoading(false);
             })
             .catch((error) => {
               console.error(error);
-              setLoading(false);
+              router.push(Routes.login);
             });
         } else {
           router.push(Routes.login);
