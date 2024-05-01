@@ -23,12 +23,12 @@ export default function NotePage({
     const textarea = textareaRef.current;
     if (textarea) {
       textarea.style.height = 'auto';
-      textarea.style.height = textarea.scrollHeight + 'px';
+      textarea.style.height = textarea.scrollHeight.toString() + 'px';
     }
     if (textarea) {
       const resize = () => {
         textarea.style.height = 'auto';
-        textarea.style.height = textarea.scrollHeight + 'px';
+        textarea.style.height = textarea.scrollHeight.toString() + 'px';
       };
       textarea.addEventListener('input', resize);
       return () => {

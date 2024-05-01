@@ -21,7 +21,7 @@ const ButtonCreateAccount = () => {
         <div className="flex flex-col">
           <span className="hidden leading-[13px] md:block">Create new account</span>
           <span className="block leading-[13px] md:hidden">new account</span>
-          <div className="h-[1px] w-full transition group-hover:bg-[darkorange] dark:group-hover:bg-[orange]"></div>
+          <div className="h-px w-full transition group-hover:bg-[darkorange] dark:group-hover:bg-[orange]"></div>
         </div>
       </button>
     </Link>

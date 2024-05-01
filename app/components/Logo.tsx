@@ -12,15 +12,11 @@ const Logo = ({ alternate }: { alternate?: boolean }) => (
     <div className="flex">
       <h1 className="flex">
         <span
-          // eslint-disable-next-line tailwindcss/classnames-order
-          className={`${alternate && 'hidden md:block'} font-bold text-[darkorange] transition dark:text-[orange]`}
+          className={`${alternate ? 'hidden md:block' : ''} font-bold text-[darkorange] transition dark:text-[orange]`}
         >
           My
         </span>
-        <span
-          // eslint-disable-next-line tailwindcss/classnames-order
-          className={`${alternate && 'hidden md:block'} font-medium text-black transition dark:text-white`}
-        >
+        <span className={`${alternate ? 'hidden md:block' : ''} font-medium text-black transition dark:text-white`}>
           Notebook
         </span>
       </h1>

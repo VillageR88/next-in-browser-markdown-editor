@@ -155,7 +155,7 @@ const Notebook = ({
         })}
       </Reorder.Group>
       <button
-        className="button1 flex pt-[1px]"
+        className="button1 flex pt-px"
         onClick={() => {
           setDataContext((prevState) => {
             const newNotebook = [...prevState.collections];
@@ -172,7 +172,7 @@ const Notebook = ({
         }}
       >
         <IconAdd />
-        <span className="hidden pl-1 pt-[1px] md:block">Add</span>
+        <span className="hidden pl-1 pt-px md:block">Add</span>
       </button>
     </div>
   );

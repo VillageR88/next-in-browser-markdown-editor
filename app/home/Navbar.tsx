@@ -46,7 +46,7 @@ const Navbar = ({ token, loading }: { token: string; loading: boolean }) => {
                   }
                   stopMouseLoader({ mouseLoader: mouseLoader });
                 })
-                .catch((error) => {
+                .catch((error: unknown) => {
                   console.error(error);
                   stopMouseLoader({ mouseLoader: mouseLoader });
                 });

@@ -1,7 +1,7 @@
 const ButtonDrag = ({ func, alwaysVisible }: { func(arg: React.PointerEvent): void; alwaysVisible?: boolean }) => {
   return (
     <div
-      className={`transition-colors hover:cursor-grab active:cursor-grabbing group-hover/group3:opacity-100 ${!alwaysVisible && 'md:opacity-0'}`}
+      className={`transition-colors hover:cursor-grab active:cursor-grabbing group-hover/group3:opacity-100 ${!alwaysVisible ? 'md:opacity-0' : ''}`}
       onPointerDown={(e) => {
         e.preventDefault();
         func(e);

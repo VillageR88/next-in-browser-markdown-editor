@@ -5,7 +5,7 @@ import React from 'react';
 
 export default function LayoutAccount({ children, title }: { children: React.ReactNode; title: string }) {
   return (
-    <div className="flex min-h-[100dvh] w-full flex-col items-center justify-center px-6 py-10 font-instrumentSans md:min-h-screen">
+    <div className="flex min-h-dvh w-full flex-col items-center justify-center px-6 py-10 font-instrumentSans md:min-h-screen">
       <div className={`flex w-full max-w-[500px] flex-col items-center justify-between gap-3`}>
         <header className="flex w-full justify-between dark:drop-shadow-none">
           <Logo />

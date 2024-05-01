@@ -28,7 +28,7 @@ export default function Home() {
               initialDataContext.current = JSON.parse(JSON.stringify(data)) as CollectionGroup;
               setLoading(false);
             })
-            .catch((error) => {
+            .catch((error: unknown) => {
               console.error(error);
               router.push(Routes.login);
             });
@@ -41,7 +41,7 @@ export default function Home() {
 
   if (token !== null)
     return (
-      <div className="flex min-h-[100dvh] w-full flex-col items-center justify-start overflow-hidden text-clip md:min-h-screen">
+      <div className="flex min-h-dvh w-full flex-col items-center justify-start overflow-hidden text-clip md:min-h-screen">
         <Navbar loading={loading} token={token} />
         <Main loading={loading} token={token} />
       </div>

@@ -170,6 +170,7 @@ export async function createInvoiceResetRequest(prev: Message, formData: FormDat
         expirationTime,
         email,
       ]);
+      if (!process.env.APP_URL) return { message: 'Server error' };
       const mailOptions = {
         from: process.env.EMAIL,
         to: email,

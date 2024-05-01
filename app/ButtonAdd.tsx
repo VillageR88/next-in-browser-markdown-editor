@@ -1,7 +1,7 @@
 const ButtonAdd = ({ func, alwaysVisible }: { func(): void; alwaysVisible?: boolean }) => {
   return (
     <button
-      className={`transition hover:fill-[darkorange] group-hover:opacity-100 dark:fill-white dark:hover:fill-[orange] ${!alwaysVisible && 'md:opacity-0'}`}
+      className={`transition hover:fill-[darkorange] group-hover:opacity-100 dark:fill-white dark:hover:fill-[orange] ${!alwaysVisible ? 'md:opacity-0' : ''}`}
       onClick={func}
       style={{ touchAction: 'none' }}
     >
