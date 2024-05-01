@@ -36,4 +36,4 @@ yarn-error.log*
 next-env.d.ts
 
 .env
-serverApp
+next-in-browser-markdown-editor

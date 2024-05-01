@@ -37,8 +37,7 @@
     ".next/types/**/*.ts",
     "build/types/**/*.ts",
     "assets.d.ts",
-    "serverTestApp/types/**/*.ts",
-    "serverApp/types/**/*.ts"
+    "next-in-browser-markdown-editor/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
