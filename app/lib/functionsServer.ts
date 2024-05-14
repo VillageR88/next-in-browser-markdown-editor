@@ -153,6 +153,7 @@ export async function createInvoiceLogin(prev: Message, formData: FormData): Pro
 
 export async function createInvoiceResetRequest(prev: Message, formData: FormData): Promise<Message> {
   const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
     service: 'gmail',
     auth: {
       user: process.env.EMAIL,
