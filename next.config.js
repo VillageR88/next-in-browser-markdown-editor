@@ -6,7 +6,7 @@ const nextConfig = {
   //output: 'export',
   images: { unoptimized: true },
   trailingSlash: true,
-  distDir: 'next-in-browser-markdown-editor',
+  //distDir: 'next-in-browser-markdown-editor',
   reactStrictMode: true,
 };
 
