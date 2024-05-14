@@ -11,12 +11,10 @@ const config: Config = {
       fontFamily: {
         //sans: ['var(--font-sans)'],
         //mono: ['var(--font-mono)'],
-        instrumentSans: ['Instrument Sans', 'sans-serif'],
-        materialSymbolsOutlined: ['Material Symbols Outlined', 'sans-serif'],
-        roboto: ['Roboto', 'sans-serif'],
-        robotoSlab: ['Roboto Slab', 'serif'],
-        robotoMono: ['Roboto Mono', 'monospace'],
-        robotoMono2: ['Roboto Mono', 'monospace'],
+        roboto: ['var(--font-roboto)'],
+        robotoMono: ['var(--font-roboto-mono)'],
+        robotoSlab: ['var(--font-roboto-slab)'],
+        instrumentSans: ['var(--font-instrument-sans)'],
       },
       colors: {
         gray1: '#121212',

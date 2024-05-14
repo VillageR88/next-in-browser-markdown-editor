@@ -5,6 +5,32 @@ import type { Metadata } from 'next';
 import DataProvider from '@/app/_providers/DataContext';
 import MainContextProvider from '@/app/_providers/MainContext';
 import SidebarContextProvider from '@/app/_providers/SidebarContext';
+import { Roboto, Roboto_Mono, Roboto_Slab, Instrument_Sans } from 'next/font/google';
+
+const roboto_mono = Roboto_Mono({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-roboto-mono',
+});
+
+const roboto = Roboto({
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--font-roboto',
+  weight: ['100', '300', '400', '500', '700', '900'],
+});
+
+const robotoSlab = Roboto_Slab({
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--font-roboto-slab',
+});
+
+const instrumentSans = Instrument_Sans({
+  display: 'swap',
+  subsets: ['latin'],
+  variable: '--font-instrument-sans',
+});
 
 export const metadata: Metadata = {
   title: 'MARKDOWN',
@@ -19,15 +45,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="use-credentials" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=optional"
-          rel="stylesheet"
-        />
+
         <meta property="og:image" content="/Markdown.png" />
       </head>
-      <body className={'bg-[#fcfcfc]  dark:bg-[#1D1F22]'}>
+      <body
+        className={`${roboto.variable} ${roboto_mono.variable} ${robotoSlab.variable} ${instrumentSans.variable} bg-[#fcfcfc] dark:bg-[#1D1F22]`}
+      >
         <DataProvider>
           <MainContextProvider>
             <SidebarContextProvider>{children}</SidebarContextProvider>

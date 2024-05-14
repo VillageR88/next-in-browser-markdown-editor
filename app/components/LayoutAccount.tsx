@@ -19,7 +19,7 @@ export default function LayoutAccount({ children, title }: { children: React.Rea
         </header>
         <main className="mt-[10px] flex min-h-full w-full flex-col gap-[48px] rounded-[6px] border border-[rgba(0,0,0,0.05)] bg-[white] px-8 pb-14 pt-10 shadow-[0_5px_25px_3px_rgba(0,0,0,0.03)] transition-colors dark:border-[#313131] dark:bg-[#222427] dark:shadow-none">
           <div className="flex h-full items-start">
-            <h1 className="leading-[32px] tracking-wide [word-spacing:3px]">{title}</h1>
+            <h1 className="font-roboto leading-[32px] tracking-wide [word-spacing:3px]">{title}</h1>
           </div>
           <div>{children}</div>
         </main>
