@@ -153,6 +153,7 @@ export async function createInvoiceLogin(prev: Message, formData: FormData): Pro
 
 export async function createInvoiceResetRequest(prev: Message, formData: FormData): Promise<Message> {
   const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
     service: 'gmail',
     auth: {
       user: process.env.EMAIL,
@@ -184,10 +185,15 @@ export async function createInvoiceResetRequest(prev: Message, formData: FormDat
         subject: 'Password Reset',
         text: `You are receiving this because you (or someone else) have requested the reset of the password for your account.\n\nPlease click on the following link, or paste this into your browser to complete the process within one hour of receiving it:\n\n${process.env.APP_URL}/reset-password/reset/${resetToken}\n\nIf you did not request this, please ignore this email and your password will remain unchanged.\n`,
       };
-      transporter.sendMail(mailOptions, (err) => {
-        if (err) {
-          console.error('there was an error: ', err);
-        }
+      await new Promise((resolve, reject) => {
+        transporter.sendMail(mailOptions, (err) => {
+          if (err) {
+            console.error('there was an error: ', err);
+            reject(err);
+          } else {
+            resolve(null);
+          }
+        });
       });
       return { message: 'success' };
     } else {
