@@ -36,7 +36,6 @@ export default function ButtonTheme({ sidebarButton }: { sidebarButton?: boolean
       } else {
         setTheme(Theme.light);
       }
-      document.documentElement.classList.remove('hidden');
     }
   }, [theme]);
 
@@ -54,7 +53,10 @@ export default function ButtonTheme({ sidebarButton }: { sidebarButton?: boolean
     }
   }, [theme]);
   useEffect(() => {
-    if (theme !== null && !document.body.classList.contains('transition')) document.body.classList.add('transition');
+    if (theme !== null && !document.body.classList.contains('transition')) {
+      document.body.classList.add('transition');
+      document.documentElement.classList.remove('hidden');
+    }
     return () => {
       document.body.classList.remove('transition');
     };
